@@ -2,7 +2,7 @@ package impl
 
 import "testing"
 
-func TestAddAndGet(t *testing.T) {
+func TestArrayStackAddAndGet(t *testing.T) {
 	as := NewArrayStack[int]()
 
 	dummyDataLen := 100
@@ -14,12 +14,12 @@ func TestAddAndGet(t *testing.T) {
 
 	for i := range dummyDataLen {
 		if as.Get(i) != dummyData[i] {
-			t.Errorf("TestAddAndGet has an error. expected: %d, value: %d\n", dummyData[i], as.Get(i))
+			t.Errorf("TestArrayStackAddAndGet has an error. expected: %d, value: %d\n", dummyData[i], as.Get(i))
 		}
 	}
 }
 
-func TestAddAndSet(t *testing.T) {
+func TestArrayStackAddAndSet(t *testing.T) {
 	as := NewArrayStack[int]()
 
 	dummyDataLen := 100
@@ -33,12 +33,12 @@ func TestAddAndSet(t *testing.T) {
 
 	for i := range dummyDataLen {
 		if as.Get(i) != dummyData[i] {
-			t.Errorf("TestAddAndSet has an error. expected: %d, value: %d\n", dummyData[i], as.Get(i))
+			t.Errorf("TestArrayStackAddAndSet has an error. expected: %d, value: %d\n", dummyData[i], as.Get(i))
 		}
 	}
 }
 
-func TestAddAndSize(t *testing.T) {
+func TestArrayStackAddAndSize(t *testing.T) {
 	as := NewArrayStack[int]()
 
 	dummyDataLen := 100
@@ -47,11 +47,11 @@ func TestAddAndSize(t *testing.T) {
 	}
 
 	if as.Size() != dummyDataLen {
-		t.Errorf("TestAddAndSize has an error. expected: %d, value: %d\n", dummyDataLen, as.Size())
+		t.Errorf("TestArrayStackAddAndSize has an error. expected: %d, value: %d\n", dummyDataLen, as.Size())
 	}
 }
 
-func TestAddAndRemove(t *testing.T) {
+func TestArrayStackAddAndRemove(t *testing.T) {
 	as := NewArrayStack[int]()
 
 	dummyDataLen := 100
@@ -65,7 +65,7 @@ func TestAddAndRemove(t *testing.T) {
 
 	for i := range dummyDataLen {
 		if as.Get(i) != dummyData[i] {
-			t.Errorf("TestAddAndRemove has an error. expected: %d, value: %d\n", dummyData[i], as.Get(i))
+			t.Errorf("TestArrayStackAddAndRemove has an error. expected: %d, value: %d\n", dummyData[i], as.Get(i))
 		}
 	}
 }
